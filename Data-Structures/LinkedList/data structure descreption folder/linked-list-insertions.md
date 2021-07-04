@@ -1,0 +1,18 @@
+# Linked List Insertions
+
+
+You can create Linked list and manipulate it by adding before and after a given node.
+
+## Challenge
+
+writing methods to insert value in the before and after the list, search on specific value then print the list as a string.
+
+## Approach & Efficiency
+
+with the insert elements in the before and after methods, will start from the head and search on the specific value, 
+if it found it will add the new value before or after it. 
+
+
+the append method: start from head and move forward then add the new value here.
+
+## API
