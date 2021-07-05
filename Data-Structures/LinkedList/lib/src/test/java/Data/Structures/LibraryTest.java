@@ -88,4 +88,53 @@ class LibraryTest {
         String expected="{ 2 } -->  { 11 } -->  { 5 } --> NULL";
         assertEquals(expected, output) ;
     }
+
+    @Test
+    public void testfindNthWhenKisGraterThanTheLengthOfList() {
+        test.append(45);
+        test.append(78);
+
+        int output = test.findNth(3);
+        int expected = -1;
+        assertEquals( expected, output);
+
+    }
+    @Test
+    public void testfindNthWherekAndTheLengthOfTheListAreTheSame() {
+        test.append(45);
+        test.append(78);
+
+        int output = test.findNth(3);
+        int expected = -1;
+        assertEquals( expected, output);
+    }
+    @Test
+    public void testfindNthWherekisNotApositiveInteger() {
+        test.append(45);
+        test.append(78);
+
+        int output = test.findNth(3);
+        int expected = -1;
+        assertEquals( expected, output);
+    }
+    @Test
+    public void testfindNthWhereSizeIsOne() {
+        test.insert(11);
+        int output = test.findNth(0);
+        int expected = 11;
+        assertEquals(expected, output);
+    }
+
+    @Test
+    public void testfindNthWherekisInTheMiddle() {
+        test.append(45);
+        test.append(78);
+        test.append(30);
+        test.append(12);
+
+        int output = test.findNth(3);
+        int expected = 30;
+        assertEquals( expected, output);
+    }
+
 }
