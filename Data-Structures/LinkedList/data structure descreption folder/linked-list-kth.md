@@ -13,4 +13,4 @@ the kth method will initialize two pointer in head the second one will move forw
 and then both of them will move forward one step until second one reach to end of list ;
 here the position of first one will be the value
 ## API
-![Linked List kth](D:\401\401-data-structures-and-algorithms\Data-Structures\LinkedList\assests\Kth.jpg)
+![Linked List kth](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/LinkedList/assests/Kth.jpg)
