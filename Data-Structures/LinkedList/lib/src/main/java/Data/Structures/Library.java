@@ -13,25 +13,17 @@ public class Library {
 
         linkedList myList = new linkedList();
 
-//        myList.insert(65);
-//        myList.insert(43);
-//        myList.insert(88);
-//        myList.insert(57);
-//        myList.insert(90);
-//        myList.insert(100);
-
-
         myList.append(11);
-
-
-
         myList.insertBefore(11,2);
         myList.insertAfter(11,5);
+        myList.insertBefore(5,3);
+
 
 
 
         System.out.println(myList.toString());
         System.out.println(myList.includes(100));
+        System.out.println(myList.findNth( 2));
 
 
     }
