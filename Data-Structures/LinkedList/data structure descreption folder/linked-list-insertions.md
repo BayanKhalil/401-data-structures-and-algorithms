@@ -13,3 +13,4 @@ the insert values in the before and after methods, will start from the head and 
 if it found it will add the new value before or after it.and the append method start from head and move forward 
 then add the new value here.
 ## API
+ ![Linked List Insertions](D:\401\401-data-structures-and-algorithms\Data-Structures\LinkedList\assests\appendBeforeAfter.jpg)
