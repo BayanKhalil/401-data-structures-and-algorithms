@@ -12,5 +12,4 @@ writing methods to insert value in the before and after the list, search on spec
 the insert values in the before and after methods, will start from the head and search on the specific value, 
 if it found it will add the new value before or after it.and the append method start from head and move forward 
 then add the new value here.
-
 ## API
