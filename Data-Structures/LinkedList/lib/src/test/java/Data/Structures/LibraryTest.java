@@ -137,4 +137,20 @@ class LibraryTest {
         assertEquals( expected, output);
     }
 
+    @Test
+    public void testZipLists(){
+        linkedList ListOne = new linkedList();
+        linkedList ListTwo = new linkedList();
+        ListOne.append(22);
+        ListOne.append(33);
+        ListOne.append(77);
+
+        ListTwo.append(2);
+        ListTwo.append(6);
+        ListTwo.append(8);
+        linkedList output = linkedList.zipLists(ListOne,ListTwo);
+        String expected = "{ 2 } -->  { 22 } -->  { 6 } -->  { 33 } -->  { 8 } -->  { 77 } --> NULL";
+        assertEquals( expected, output);
+    }
+
 }

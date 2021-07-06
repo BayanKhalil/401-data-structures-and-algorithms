@@ -2,15 +2,15 @@ package Data.Structures;
 
 public class linkedList {
 
-
-
-    public class Node {
+    static Node head1, head2;
+    public static class Node {
         public int value;
         public Node next;
 
+
         public Node(int value) {
             this.value = value;
-
+              next=null;
         }
     }
 
@@ -123,6 +123,26 @@ public class linkedList {
 //       }
    }
 
+    public static linkedList zipLists(linkedList a, linkedList b) {
+        Node aHead= a.head;
+        Node bHead = b.head;
+        Node aNext;
+        Node bNext;
+
+
+        while(aHead != null && bHead != null) {
+            aNext = aHead.next;
+            bNext = bHead.next;
+
+            aHead.next = bNext;
+            bHead.next = aHead;
+
+            aHead = aNext;
+            bHead = bNext;
+
+        }
+        return b;
+    }
 
 
 

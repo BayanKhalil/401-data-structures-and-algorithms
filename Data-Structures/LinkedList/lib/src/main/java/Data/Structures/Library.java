@@ -13,18 +13,30 @@ public class Library {
 
         linkedList myList = new linkedList();
 
-        myList.append(11);
-        myList.insertBefore(11,2);
-        myList.insertAfter(11,5);
-        myList.insertBefore(5,3);
+//        myList.append(11);
+//        myList.insertBefore(11,2);
+//        myList.insertAfter(11,5);
+//        myList.insertBefore(5,3);
 
 
 
+        linkedList ListOne = new linkedList();
+        linkedList ListTwo = new linkedList();
+        ListOne.append(22);
+        ListOne.append(33);
+        ListOne.append(77);
+
+        ListTwo.append(2);
+        ListTwo.append(6);
+        ListTwo.append(8);
 
         System.out.println(myList.toString());
-        System.out.println(myList.includes(100));
-        System.out.println(myList.findNth( 2));
+//        System.out.println(myList.includes(100));
+//        System.out.println(myList.findNth( 2));
+        System.out.println(linkedList.zipLists(ListOne,ListTwo));
 
 
     }
+
+
 }
