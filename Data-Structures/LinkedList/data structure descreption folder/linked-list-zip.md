@@ -13,4 +13,4 @@ in list zip method initialize two linked list as parameters ,create four pointer
 and the second two on the next of head then connect between them then moved them forward ,
 all of that after checked if there two list 
 ## API
-![Linked List kth](D:\401\401-data-structures-and-algorithms\Data-Structures\LinkedList\assests\zip list.png)
+![Linked List kth](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/LinkedList/assests/zip%20list.png)
