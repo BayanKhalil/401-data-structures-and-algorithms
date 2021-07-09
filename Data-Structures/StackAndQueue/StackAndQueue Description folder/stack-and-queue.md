@@ -1,12 +1,12 @@
-#Stacks and Queues
+# Stacks and Queues
 You can create Stacks and Queue using LinkedList and manipulate it.
 
-##Challenge
+## Challenge
  *Stack* writing methods to push elements in the stack, pop from it , print the top element and check if the stack empty .
 
  *Queues* writing methods to enqueue elements in the stack, dequeue from it , print the top element and check if the stack empty .
 
-##Approach & Efficiency
+## Approach & Efficiency
 There are three main classes ( Node , stack, queue ), each Node has two fields (value, next node) 
 and the stack has one field which is the (top node) top will pointing always to the last node of the stack,which it's follow FILO principle
 when you need to push value to stack, it will take the top place and pointing to the new top. The time complexity of inserting a value is : O(1) 
@@ -14,7 +14,7 @@ when you need to push value to stack, it will take the top place and pointing to
 and the queue has two field which is the (front,back) front will pointing always to the first node of the stack,and back will pointing always to the last node of the stack which it's follow FIFO principle
 when you need to insert value to queue, it will take the back place and pointing to the new node.
 
-##API
+## API
 **Stack**
 push(value): will insert the passed value as a new top of the stack and make top next pointer on the new node. 
 
