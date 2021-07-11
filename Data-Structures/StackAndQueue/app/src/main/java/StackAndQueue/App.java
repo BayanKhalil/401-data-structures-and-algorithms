@@ -44,5 +44,12 @@ public class App {
         System.out.println(queue.isEmpty());
         System.out.println(queue.dequeue()+ " dequeue from Queue");
         System.out.println("Top element is " + queue.peek());
+
+        pseudoQueue pseudoQueue= new pseudoQueue();
+        pseudoQueue.enqueue(100);
+        pseudoQueue.enqueue(500);
+        pseudoQueue.enqueue(300);
+        System.out.println("Top element is " + pseudoQueue.peek());
+        System.out.println( pseudoQueue.dequeue());
     }
 }
