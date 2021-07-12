@@ -13,4 +13,4 @@ You can create queue with two stacks
  the top item is popped, then returning the item
  
  # API
- ![stack-queue-pseudo](https://miro.com/welcomeonboard/OU1uQ3NKaWhNb3ZGRDZoTWRrZnF6MDVBMWo1SzFBWTNEUUtWV1NaSW4xcm1WMzVJTHVCdHk2V251blAzV0NHTHwzMDc0NDU3MzYxMjQ1NzkwODg3)
+ ![stack-queue-pseudo](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/StackAndQueue/assessts/My%20First%20Board%20(1).jpg)
