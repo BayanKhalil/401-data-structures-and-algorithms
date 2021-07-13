@@ -4,6 +4,7 @@
 package StackAndQueue;
 
 public class App {
+
     public String getGreeting() {
         return "Hello World!";
     }
@@ -53,28 +54,31 @@ public class App {
 //        System.out.println( pseudoQueue.dequeue());
 
 
-        Cat cat1 = new Cat("kitty");
-        Queue<Cat> catQueue = new Queue<>();
+//        Cat cat1 = new Cat("kitty");
+//        Queue<Cat> catQueue = new Queue<>();
+//
+//        catQueue.enqueue(cat1);
+//        System.out.println( catQueue.peek());
+//
+//        Dog dog1 = new Dog("doggy");
+//        Queue<Dog> dogQueue = new Queue<>();
+//
+//        dogQueue.enqueue(dog1);
+////        System.out.println( dogQueue.peek());
+//
+//
+//
+//        Dog dog2= new Dog("dequeueDog");
+//
+//        AnimalShelter Shelter = new AnimalShelter();
+//        Shelter.enqueue(dog2);
+//        Shelter.dequeue("dog");
+//        Shelter.dequeue("tiger");
 
-        catQueue.enqueue(cat1);
-        System.out.println( catQueue.peek());
-
-        Dog dog1 = new Dog("doggy");
-        Queue<Dog> dogQueue = new Queue<>();
-
-        dogQueue.enqueue(dog1);
-//        System.out.println( dogQueue.peek());
 
 
-
-        Dog dog2= new Dog("dequeueDog");
-
-        AnimalShelter Shelter = new AnimalShelter();
-        Shelter.enqueue(dog2);
-        Shelter.dequeue("dog");
-        Shelter.dequeue("tiger");
-
-
-
+        boolean result = validateBrackets.isBalanced("[{}]");
+        System.out.println(result);
     }
+
 }
