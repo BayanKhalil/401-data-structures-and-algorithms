@@ -74,11 +74,15 @@ public class App {
 //        Shelter.enqueue(dog2);
 //        Shelter.dequeue("dog");
 //        Shelter.dequeue("tiger");
+        validateBrackets instance = new validateBrackets();
 
 
+        System.out.println( instance.balancedParenthensies("[()]{}{[()()]()}"));
+        System.out.println(instance.balancedParenthensies("()[[Extra Characters]]"));
+        System.out.println(instance.balancedParenthensies("{}{Code}[Fellows](())"));
 
-        boolean result = validateBrackets.isBalanced("[{}]");
-        System.out.println(result);
     }
+
+
 
 }
