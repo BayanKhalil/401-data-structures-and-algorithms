@@ -15,4 +15,5 @@ if not return false
 
 
 ## API
+![validateBrackets](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/StackAndQueue/assessts/Untitled%20(2).jpg)
 
