@@ -1,33 +1,30 @@
 package StackAndQueue;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+
+public class validateBrackets {
 
 
-
-    public class validateBrackets {
-
-        public static boolean isBalanced(String str) {
-            if (null == str || ((str.length() % 2) != 0)) {
-                return false;
-            } else {
-                char[] ch = str.toCharArray();
-                for (char c : ch) {
-                    if (!(c == '{' || c == '[' || c == '(' || c == '}' || c == ']' || c == ')')) {
-                        return false;
-                    }
-
+    public  boolean balancedParenthensies(String s) {
+        Stack<Character> stack  = new Stack<Character>();
+        for(int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if(c == '[' || c == '(' || c == '{' ) {
+                stack.push(c);
+            } else if(c == ']') {
+                if(stack.isEmpty() || stack.pop() != '[') {
+                    return false;
+                }
+            } else if(c == ')') {
+                if(stack.isEmpty() || stack.pop() != '(') {
+                    return false;
+                }
+            } else if(c == '}') {
+                if(stack.isEmpty() || stack.pop() != '{') {
+                    return false;
                 }
             }
 
-            while (str.contains("()") || str.contains("[]") || str.contains("{}")) {
-                str = str.replaceAll("\\(\\)", "")
-                        .replaceAll("\\[\\]", "")
-                        .replaceAll("\\{\\}", "");
-            }
-            return (str.length() == 0);
-
         }
-
+        return stack.isEmpty();
     }
-
+}
