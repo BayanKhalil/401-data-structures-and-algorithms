@@ -77,11 +77,27 @@ public class App {
         validateBrackets instance = new validateBrackets();
 
 
-        System.out.println( instance.balancedParenthensies("[()]{}{[()()]()}"));
-        System.out.println(instance.balancedParenthensies("()[[Extra Characters]]"));
-        System.out.println(instance.balancedParenthensies("{}{Code}[Fellows](())"));
+//        System.out.println( instance.balancedParenthensies("[()]{}{[()()]()}"));
+//        System.out.println(instance.balancedParenthensies("()[[Extra Characters]]"));
+//        System.out.println(instance.balancedParenthensies("{}{Code}[Fellows](())"));
 
+        MaxStack obj = new MaxStack();
+       obj.push(3);
+        obj.push(5);
+         obj.push(6);
+        obj.push(90);
+        obj.push(23);
+
+//         obj.top();
+//         obj.peekMax();
+//         obj.popMax();
+//         obj.popMax();
+//        System.out.println( obj.pop());
+//        System.out.println(obj.top());
+//        System.out.println( obj.peekMax());
+        System.out.println( obj.popMax());
     }
+
 
 
 
