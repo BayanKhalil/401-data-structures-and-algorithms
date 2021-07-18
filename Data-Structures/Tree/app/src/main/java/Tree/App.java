@@ -12,33 +12,56 @@ public class App {
         System.out.println("Binary Tree");
 
         // creates the binary tree
-        BinaryTree binaryTree = new BinaryTree();
+//        BinaryTree binaryTree = new BinaryTree();
+//
+//        // adds nodes to the tree
+//        binaryTree.setRoot(new Node(1));
+//        binaryTree.getRoot().setLeft(new Node(2));
+//        binaryTree.getRoot().setRight(new Node(3));
+//        binaryTree.getRoot().getLeft().setLeft(new Node(4));
+//
 
-        // adds nodes to the tree
-        binaryTree.setRoot(new Node(1));
-        binaryTree.getRoot().setLeft(new Node(2));
-        binaryTree.getRoot().setRight(new Node(3));
-        binaryTree.getRoot().getLeft().setLeft(new Node(4));
 
-        System.out.println("inorder");
-        binaryTree.inOrderTraverse(binaryTree.getRoot());
+//        BinarySearchTree binarySearchTree = new BinarySearchTree();
+//        binarySearchTree.add(5);
+//        binarySearchTree.add(7);
+//        binarySearchTree.add(3);
+//        binarySearchTree.add(10);
+//        System.out.println();
+//        System.out.println(binarySearchTree.toString());
+//        System.out.println(binarySearchTree.contains(11));
 
-        System.out.println();
-        System.out.println("postorder");
-        binaryTree.postOrderTraverse(binaryTree.getRoot());
 
-        System.out.println();
-        System.out.println("preorder");
-        binaryTree.preOrderTraverse(binaryTree.getRoot());
+      Node  node1 = new Node(1);
+      Node  node2 = new Node(2);
+      Node  node3 = new Node(3);
+      Node  node4 = new Node(4);
+      Node  node5 = new Node(6);
+      Node  node6 = new Node(8);
 
-        BinarySearchTree binarySearchTree = new BinarySearchTree();
-        binarySearchTree.add(5);
-        binarySearchTree.add(7);
-        binarySearchTree.add(3);
-        binarySearchTree.add(10);
-        System.out.println();
-        System.out.println(binarySearchTree.toString());
-        System.out.println(binarySearchTree.contains(11));
+        BinaryTree binaryTree = new BinaryTree(node1);
+
+        node1.setLeft(node2);
+        node1.setRight(node3);
+
+
+        node2.setLeft(node4);
+        node2.setRight(node5);
+
+        node3.setLeft(node6);
+
+        System.out.print("Preorder:\n");
+//        BinaryTree.preorder(binaryTree.getRoot());
+        System.out.println(binaryTree.preorder(node1));
+        System.out.print("\nPostorder:\n");
+        System.out.println(binaryTree.postorder(node1));
+        System.out.print("\nInorder:\n");
+        System.out.println(binaryTree.inorder(node1));
+        System.out.print("\n");
+
+
+        System.out.println(binaryTree.postorder(node2));
+
 
     }
 }

@@ -6,6 +6,10 @@ package Tree;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -41,7 +45,49 @@ class AppTest {
         assertEquals (expected,test3.toString());
     }
 
+@DisplayName("return a collection from a postorder traversal")
+@Test
+public void test4(){
+    Node  node1 = new Node(1);
+    Node  node2 = new Node(2);
+    Node  node3 = new Node(3);
 
+    BinaryTree binaryTree = new BinaryTree(node1);
 
+    node1.setLeft(node2);
+    node1.setRight(node3);
+    List expected=binaryTree.postorder(binaryTree.root);
+    assertArrayEquals(Arrays.asList(2,3,1).toArray(), expected.toArray());
 
+}
+    @DisplayName("return a collection from a preorder traversal")
+    @Test
+    public void test5(){
+        Node  node1 = new Node(1);
+        Node  node2 = new Node(2);
+        Node  node3 = new Node(3);
+
+        BinaryTree binaryTree = new BinaryTree(node1);
+
+        node1.setLeft(node2);
+        node1.setRight(node3);
+        List expected=binaryTree.preorder(binaryTree.root);
+        assertArrayEquals(Arrays.asList(1,2,3).toArray(), expected.toArray());
+
+    }
+    @DisplayName("return a collection from an inorder traversal")
+    @Test
+    public void test6(){
+        Node  node1 = new Node(1);
+        Node  node2 = new Node(2);
+        Node  node3 = new Node(3);
+
+        BinaryTree binaryTree = new BinaryTree(node1);
+
+        node1.setLeft(node2);
+        node1.setRight(node3);
+        List expected=binaryTree.preorder(binaryTree.root);
+        assertArrayEquals(Arrays.asList(1,2,3).toArray(), expected.toArray());
+
+    }
 }

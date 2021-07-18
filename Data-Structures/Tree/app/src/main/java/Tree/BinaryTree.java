@@ -1,37 +1,48 @@
 package Tree;
 
-import org.checkerframework.framework.qual.DefaultQualifier;
-
 import java.util.ArrayList;
+import java.util.List;
 
 public class BinaryTree {
     Node root;
-
-    public void inOrderTraverse(Node node) {
-        if (node != null) {
-            inOrderTraverse(node.getLeft()); // traverse left sub tree
-            System.out.print(" " + node.getKey()); // root
-            inOrderTraverse(node.getRight()); // traverse right sub tree
-        }
+    public BinaryTree(Node n) {
+        this.root = n;
     }
 
-    public void postOrderTraverse(Node node) {
-        ArrayList<Integer> postOrderList = new ArrayList<>();
-        if (node != null) {
-            postOrderTraverse(node.getLeft()); // traverse left sub tree
-            postOrderTraverse(node.getRight()); // traverse right sub tree
-            System.out.print(" " + node.getKey()); // root
+    public  List inorder(Node n) {
+        ArrayList tree=new ArrayList();
+        if(n != null) {
+            tree.addAll(inorder(n.getLeft())); // traverse left sub tree
+            System.out.print(" " + tree.add(n.getKey())); // root
+            tree.addAll( inorder(n.getRight())); // traverse right sub tree
+
         }
+        return tree;
+    }
+
+    public List postorder(Node n) {
+        ArrayList tree=new ArrayList();
+        if(n != null) {
+            tree.addAll(postorder(n.getLeft()));
+            tree.addAll(postorder(n.getRight()));
+            System.out.print(" "+tree.add(n.getKey())+" ");
+        }
+        return tree;
     }
 
 
-    public void preOrderTraverse(Node node) {
-        if (node != null) {
-            System.out.print(" " + node.getKey()); // root
-            preOrderTraverse(node.getLeft()); // traverse left sub tree
-            preOrderTraverse(node.getRight()); // traverse right sub tree
+    public List preorder(Node n) {
+        ArrayList tree=new ArrayList();
+        if(n != null) {
+            System.out.print(" "+tree.add(n.getKey())+" ");
+            tree.addAll(postorder(n.getLeft()));
+            tree.addAll(postorder(n.getRight()));
         }
+        return tree;
     }
+
+
+
 
     public Node getRoot() {
         return root;

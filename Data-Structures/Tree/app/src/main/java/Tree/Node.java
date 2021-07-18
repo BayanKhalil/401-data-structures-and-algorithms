@@ -4,6 +4,7 @@ public class Node {
     private final int key;
     private Node left;
     private Node right;
+    public Node parent;
 
     public Node(int key) {
         this.key = key;

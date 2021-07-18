@@ -32,10 +32,10 @@ public class BinarySearchTree {
     }
 
 
-    public boolean contains(int value) {
+    public boolean contains(int key) {
         Node currNode = root;
-        while ( !(currNode.getKey()==value )) {
-            if (value < currNode.getKey()) {
+        while ( !(currNode.getKey()==key )) {
+            if (key < currNode.getKey()) {
                 currNode = currNode.getLeft();
             } else {
                 currNode = currNode.getRight();
