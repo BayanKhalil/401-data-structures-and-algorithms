@@ -41,53 +41,64 @@ class AppTest {
         test3.add(7);
         test3.add(3);
         test3.add(10);
-       String expected="BinarySearchTree{root=Node{key=5, left=Node{key=3, left=null, right=null}, right=Node{key=7, left=null, right=Node{key=10, left=null, right=null}}}}" ;
+       String expected="BinarySearchTree{root=Node{value=5, right=Node{value=7, right=Node{value=10, right=null, left=null}, left=null}, left=Node{value=3, right=null, left=null}}}" ;
         assertEquals (expected,test3.toString());
     }
 
 @DisplayName("return a collection from a postorder traversal")
 @Test
 public void test4(){
-    Node  node1 = new Node(1);
-    Node  node2 = new Node(2);
-    Node  node3 = new Node(3);
+    BinaryTree  binaryTree = new BinaryTree();
 
-    BinaryTree binaryTree = new BinaryTree(node1);
 
-    node1.setLeft(node2);
-    node1.setRight(node3);
-    List expected=binaryTree.postorder(binaryTree.root);
-    assertArrayEquals(Arrays.asList(2,3,1).toArray(), expected.toArray());
+
+        binaryTree.add(5);
+        binaryTree.add(7);
+        binaryTree.add(3);
+        binaryTree.add(10);
+
+
+
+    List expected=binaryTree.PostOrder();
+    assertArrayEquals(Arrays.asList(3,10,7,5).toArray(), expected.toArray());
 
 }
     @DisplayName("return a collection from a preorder traversal")
     @Test
     public void test5(){
-        Node  node1 = new Node(1);
-        Node  node2 = new Node(2);
-        Node  node3 = new Node(3);
+        BinaryTree  binaryTree = new BinaryTree();
 
-        BinaryTree binaryTree = new BinaryTree(node1);
 
-        node1.setLeft(node2);
-        node1.setRight(node3);
-        List expected=binaryTree.preorder(binaryTree.root);
-        assertArrayEquals(Arrays.asList(1,2,3).toArray(), expected.toArray());
+
+        binaryTree.add(5);
+        binaryTree.add(7);
+        binaryTree.add(3);
+        binaryTree.add(10);
+
+
+
+        List expected=binaryTree.Preorder();
+        assertArrayEquals(Arrays.asList(5,3,7,10).toArray(), expected.toArray());
+
 
     }
     @DisplayName("return a collection from an inorder traversal")
     @Test
     public void test6(){
-        Node  node1 = new Node(1);
-        Node  node2 = new Node(2);
-        Node  node3 = new Node(3);
+        BinaryTree  binaryTree = new BinaryTree();
 
-        BinaryTree binaryTree = new BinaryTree(node1);
 
-        node1.setLeft(node2);
-        node1.setRight(node3);
-        List expected=binaryTree.preorder(binaryTree.root);
-        assertArrayEquals(Arrays.asList(1,2,3).toArray(), expected.toArray());
+
+        binaryTree.add(5);
+        binaryTree.add(7);
+        binaryTree.add(3);
+        binaryTree.add(10);
+
+
+
+        List expected=binaryTree.inOrder();
+        assertArrayEquals(Arrays.asList(3,5,7,10).toArray(), expected.toArray());
+
 
     }
 }
