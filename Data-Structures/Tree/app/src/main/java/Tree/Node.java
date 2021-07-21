@@ -1,25 +1,23 @@
 package Tree;
 
-public class Node {
-    private final int key;
-    private Node left;
-    private Node right;
-    public Node parent;
+public class Node <T> {
+    T value;
+    Node right;
+    Node left;
 
-    public Node(int key) {
-        this.key = key;
+
+    public Node(T value) {
+        this.value = value;
+
     }
 
-    public int getKey() {
-        return key;
+
+    public T getValue() {
+        return value;
     }
 
-    public Node getLeft() {
-        return left;
-    }
-
-    public void setLeft(Node left) {
-        this.left = left;
+    public void setValue(T value) {
+        this.value = value;
     }
 
     public Node getRight() {
@@ -30,12 +28,20 @@ public class Node {
         this.right = right;
     }
 
+    public Node getLeft() {
+        return left;
+    }
+
+    public void setLeft(Node left) {
+        this.left = left;
+    }
+
     @Override
     public String toString() {
         return "Node{" +
-                "key=" + key +
-                ", left=" + left +
+                "value=" + value +
                 ", right=" + right +
+                ", left=" + left +
                 '}';
     }
 }
