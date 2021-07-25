@@ -7,16 +7,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
-    }
 
     @DisplayName( "instantiate an empty tree")
     @Test
@@ -101,4 +96,41 @@ public void test4(){
 
 
     }
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>> tree-Max<<<<<<<<<<<<<<<
+@DisplayName("return a max value")
+@Test
+public void test7() {
+    BinaryTree binaryTree = new BinaryTree();
+    binaryTree.add(5);
+    binaryTree.add(7);
+    binaryTree.add(3);
+    binaryTree.add(10);
+
+
+    int expected=binaryTree.findMaximumValue();
+    assertEquals(expected,10);
+}
+    @DisplayName("Empty tree")
+    @Test
+    void exceptionTesting() {
+
+        BinaryTree binaryTree = new BinaryTree();
+        assertNotNull(binaryTree);
+    }
+
+    @DisplayName("Exception")
+    @Test
+    public void testExceptionMessage() {
+        BinaryTree binaryTree = new BinaryTree();
+        binaryTree.add("g");
+        Throwable exception = assertThrows(NoSuchElementException.class, () -> {
+            throw new NoSuchElementException("no element of this type in the tree");
+        });
+        assertEquals("no element of this type in the tree",exception.getMessage());
+
+    }
+
+
+
 }

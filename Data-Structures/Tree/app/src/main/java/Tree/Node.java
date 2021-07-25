@@ -11,6 +11,10 @@ public class Node <T> {
 
     }
 
+    public Node() {
+
+    }
+
 
     public T getValue() {
         return value;

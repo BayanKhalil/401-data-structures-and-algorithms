@@ -3,6 +3,8 @@
  */
 package Tree;
 
+import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 public class App {
@@ -13,38 +15,6 @@ public class App {
     public static void main(String[] args) {
         System.out.println("Binary Tree");
 
-
-
-//
-//      Node  node1 = new Node(1);
-//      Node  node2 = new Node(2);
-//      Node  node3 = new Node(3);
-//      Node  node4 = new Node(4);
-//      Node  node5 = new Node(6);
-//      Node  node6 = new Node(8);
-//
-//        BinaryTree binaryTree = new BinaryTree(node1);
-//
-//        node1.setLeft(node2);
-//        node1.setRight(node3);
-//
-//
-//        node2.setLeft(node4);
-//        node2.setRight(node5);
-//
-//        node3.setLeft(node6);
-
-//        System.out.print("Preorder:\n");
-//
-//        System.out.println(binaryTree.preorder(node1));
-//        System.out.print("\nPostorder:\n");
-//        System.out.println(binaryTree.postorder(node1));
-//        System.out.print("\nInorder:\n");
-//        System.out.println(binaryTree.inorder(node1));
-//        System.out.print("\n");
-
-
-//        System.out.println(binaryTree.postorder(node2));
 
 
         BinaryTree  binaryTree = new BinaryTree();
@@ -58,16 +28,18 @@ public class App {
         binaryTree.add(11);
 
 
-        System.out.println(binaryTree.toString());
-        System.out.print("Preorder:\n");
-        System.out.println(binaryTree.Preorder());
-        System.out.print("\nInorder:\n");
-        System.out.println(binaryTree.inOrder());
-        System.out.print("\nPostorder:\n");
-        System.out.println(binaryTree.PostOrder());
-
-        System.out.println(binaryTree.contains(55));
-        System.out.println(binaryTree.contains(88));
+//        System.out.println(binaryTree.toString());
+//        System.out.print("Preorder:\n");
+//        System.out.println(binaryTree.Preorder());
+//        System.out.print("\nInorder:\n");
+//        System.out.println(binaryTree.inOrder());
+//        System.out.print("\nPostorder:\n");
+//        System.out.println(binaryTree.PostOrder());
+//
+//
+//        System.out.println(binaryTree.contains(55));
+//        System.out.println(binaryTree.contains(88));
+        System.out.println(binaryTree.findMaximumValue());
 
 
 

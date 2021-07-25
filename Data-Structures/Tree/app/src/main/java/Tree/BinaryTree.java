@@ -1,23 +1,22 @@
 package Tree;
 
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
-public class BinaryTree extends BinarySearchTree{
+public class BinaryTree<T> extends BinarySearchTree {
 
-//It is used to call superclass methods, and to access the superclass constructor.
+    //It is used to call superclass methods, and to access the superclass constructor.
 // The most common use of the super keyword is to eliminate the
 // confusion between superclasses and subclasses that have methods with the same name.
-    public BinaryTree(){
+    public BinaryTree() {
         super();
     }
 
-    public BinaryTree(int value) {
+    public BinaryTree(T value) {
         Node node1 = new Node(value);
         this.root = node1;
     }
-
 
 
     public List<Integer> Preorder() {
@@ -29,13 +28,13 @@ public class BinaryTree extends BinarySearchTree{
 
     public List<Integer> traversePreorder(Node node, List<Integer> list) {
 
-        if(node == null){
+        if (node == null) {
             return list;
         }
         list.add((Integer) node.value); // root
-         traversePreorder(node.left, list);// traverse left sub tree
+        traversePreorder(node.left, list);// traverse left sub tree
 
-         traversePreorder(node.right, list);  // traverse right sub tree
+        traversePreorder(node.right, list);  // traverse right sub tree
 
         return list;
     }
@@ -50,13 +49,13 @@ public class BinaryTree extends BinarySearchTree{
 
     public List<Integer> traverseInOrder(Node node, List<Integer> list) {
 
-        if(node == null){
+        if (node == null) {
             return list;
         }
 
-         traverseInOrder(node.left, list);// traverse left sub tree
+        traverseInOrder(node.left, list);// traverse left sub tree
         list.add((Integer) node.value); // root
-         traverseInOrder(node.right, list); // traverse right sub tree
+        traverseInOrder(node.right, list); // traverse right sub tree
 
         return list;
     }
@@ -71,18 +70,45 @@ public class BinaryTree extends BinarySearchTree{
 
     public List<Integer> traversePostOrder(Node node, List<Integer> list) {
 
-        if(node == null){
+        if (node == null) {
             return list;
         }
 
         traversePostOrder(node.left, list);// traverse left sub tree
-         traversePostOrder(node.right, list);// traverse right sub tree
+        traversePostOrder(node.right, list);// traverse right sub tree
         list.add((Integer) node.value); // root
 
         return list;
     }
 
-    @Override
+    public int findMaximumValue() {
+
+        if (this.root.value instanceof Integer) {
+            return maxFinder(root, (Integer) root.value);
+
+        } else {
+            throw new NoSuchElementException("no element of this type in the tree");
+        }
+
+    }
+//  prOrder process
+    public int maxFinder(Node curr, int highest){
+        if(curr == null) {
+            return highest;
+        }
+        if((Integer)curr.value > highest) {
+            highest = (Integer)curr.value;
+        }
+        if (curr.left != null) {
+            highest = maxFinder(curr.left, highest);
+        }
+        if (curr.right != null) {
+            highest = maxFinder(curr.right, highest);
+        }
+        return highest;
+    }
+
+
     public String toString() {
         return "BinaryTree{" +
                 "root=" + root +
