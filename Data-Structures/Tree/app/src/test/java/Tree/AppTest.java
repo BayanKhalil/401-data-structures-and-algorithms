@@ -113,7 +113,7 @@ public void test7() {
 }
     @DisplayName("Empty tree")
     @Test
-    void exceptionTesting() {
+    void test8() {
 
         BinaryTree binaryTree = new BinaryTree();
         assertNotNull(binaryTree);
@@ -125,12 +125,47 @@ public void test7() {
         BinaryTree binaryTree = new BinaryTree();
         binaryTree.add("g");
         Throwable exception = assertThrows(NoSuchElementException.class, () -> {
-            throw new NoSuchElementException("no element of this type in the tree");
+            binaryTree.findMaximumValue();
+//            throw new NoSuchElementException("no element of this type in the tree");
         });
         assertEquals("no element of this type in the tree",exception.getMessage());
 
     }
+//>>>>>>>>>>>>>>><<<<<<<<<<breadthFisrt Tree<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+    @DisplayName("return a breadthFirst tree")
+    @Test
+    public void test9(){
+        BinaryTree  binaryTree = new BinaryTree();
+
+        binaryTree.add(5);
+        binaryTree.add(7);
+        binaryTree.add(3);
+        binaryTree.add(10);
+
+        List expected=binaryTree.breadthFirstTraverse(binaryTree.root);
+        assertArrayEquals(Arrays.asList(5,3,7,10).toArray(), expected.toArray());
 
 
+    }
 
+    @DisplayName("empty tree in breadthFisrt Tree")
+    @Test
+    public void test10(){
+        BinaryTree binaryTree = new BinaryTree();
+        binaryTree.add(5);
+        assertNotNull(binaryTree.breadthFirstTraverse(binaryTree.root));
+    }
+    @DisplayName("Exception")
+    @Test
+    public void test11() {
+        BinaryTree binaryTree = new BinaryTree();
+
+        Throwable exception = assertThrows(NullPointerException.class, () -> {
+            binaryTree.breadthFirstTraverse(binaryTree.root);
+
+        });
+        assertEquals("no element in the tree",exception.getMessage());
+
+    }
 }

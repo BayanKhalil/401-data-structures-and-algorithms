@@ -107,7 +107,34 @@ public class BinaryTree<T> extends BinarySearchTree {
         }
         return highest;
     }
+    public List breadthFirstTraverse (Node root) {
+        Queue<Node> queue = new LinkedList<Node>();
+        List result = new ArrayList();
 
+        // put the root into the queue to process first.
+        if (root == null) {
+            throw new NullPointerException("no element in the tree");
+        } else {
+            queue.add(root);
+        }
+        // process rest of the nodes, while there are nodes left
+        while (!queue.isEmpty()) {
+            Node currNode = queue.remove();
+            result.add(currNode.value);
+
+            System.out.println("current result is " + result);
+            System.out.println("current queue is " + queue);
+            System.out.println("current node is " + currNode.value);
+
+            if (currNode !=null && currNode.left != null) {
+                queue.add(currNode.left);
+            }
+            if (currNode != null && currNode.right != null) {
+                queue.add(currNode.right);
+            }
+        }
+        return result;
+    }
 
     public String toString() {
         return "BinaryTree{" +
