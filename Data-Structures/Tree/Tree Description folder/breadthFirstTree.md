@@ -1,4 +1,4 @@
-# trr-breadth-first
+# tree-breadth-first
 method to output the same tree but by levels arrangement 
 
 # Challenge
@@ -10,4 +10,4 @@ then whenever we add it's left and right node it will be outed off
 then added it to list which will be  sorted by levels
 
 # API
-![](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Tree/assests/IMG_20210726_193407.jpg)
+![tree-breadth-first](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Tree/assests/IMG_20210726_193407.jpg)
