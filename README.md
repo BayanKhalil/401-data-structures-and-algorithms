@@ -17,5 +17,6 @@ stack-queue-brackets|[stack-queue-brackets](https://github.com/BayanKhalil/401-d
 Tree|[trees](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Tree/Tree%20Description%20folder/trees.md)|[code](https://github.com/BayanKhalil/401-data-structures-and-algorithms/tree/main/Data-Structures/Tree/app/src/main/java/Tree)
 tree-max|[tree-max](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Tree/Tree%20Description%20folder/treeMax.md)|[code](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Tree/app/src/main/java/Tree/BinaryTree.java)
 tree-breadth-first|[tree-breadth-first](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Tree/Tree%20Description%20folder/breadthFirstTree.md)|[code](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Tree/app/src/main/java/Tree/BinaryTree.java)
+tree-fizz-buzz|[tree-fizz-buzz](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Tree/Tree%20Description%20folder/fizzbuzz.md)|[code](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Tree/app/src/main/java/Tree/BinaryTree.java)
 
 
