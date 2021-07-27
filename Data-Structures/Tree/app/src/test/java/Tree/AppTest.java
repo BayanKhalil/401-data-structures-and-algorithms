@@ -168,4 +168,33 @@ public void test7() {
         assertEquals("no element in the tree",exception.getMessage());
 
     }
+
+    //>>>>>>>>>>>>>>><<<<<<<<<<FizzBuzz Tree<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    @DisplayName("return fizz buzz tree")
+    @Test
+    public void test12(){
+
+        BinaryTree binaryTree = new BinaryTree();
+        binaryTree.add(5);
+        binaryTree.add(15);
+        binaryTree.add(3);
+
+
+        BinaryTree expected =binaryTree.fizzBuzz(binaryTree);
+
+        assertEquals( "buzz", expected.root.value);
+        assertEquals("fizz", expected.root.left.value);
+        assertEquals("fizzbuzz", expected.root.right.value);
+    }
+    @DisplayName("return fizz buzz empty tree")
+    @Test
+    public void test13() {
+
+        BinaryTree binaryTree = new BinaryTree();
+
+        assertNull(binaryTree.fizzBuzz(binaryTree).root);
+    }
+
+
+
 }
