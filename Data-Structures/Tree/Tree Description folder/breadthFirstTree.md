@@ -1,4 +1,4 @@
-# max-tree
+# tree-breadth-first
 method to output the same tree but by levels arrangement 
 
 # Challenge

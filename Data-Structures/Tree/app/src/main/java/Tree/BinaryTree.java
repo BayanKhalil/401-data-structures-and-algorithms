@@ -122,9 +122,9 @@ public class BinaryTree<T> extends BinarySearchTree {
             Node currNode = queue.remove();
             result.add(currNode.value);
 
-            System.out.println("current result is " + result);
-            System.out.println("current queue is " + queue);
-            System.out.println("current node is " + currNode.value);
+//            System.out.println("current result is " + result);
+//            System.out.println("current queue is " + queue);
+//            System.out.println("current node is " + currNode.value);
 
             if (currNode !=null && currNode.left != null) {
                 queue.add(currNode.left);
@@ -134,6 +134,36 @@ public class BinaryTree<T> extends BinarySearchTree {
             }
         }
         return result;
+    }
+
+    public  BinaryTree <String> fizzBuzz(BinaryTree<Integer> input) {
+        BinaryTree<String> answer = new BinaryTree<>();
+        answer.root = fizzBuzzHelper(input.root);
+        return answer;
+    }
+
+    private  Node<String> fizzBuzzHelper(Node<Integer> node) {
+        if (node == null) {
+            return null;
+        } else {
+            Node<String> answer = new Node<>();
+            if ((node.value % 3) == 0 && (node.value % 5) == 0) {
+                answer.value = "fizzbuzz";
+            } else if (node.value % 5 == 0) {
+                answer.value = "buzz";
+            } else if (node.value % 3 == 0) {
+                answer.value = "fizz";
+            } else {
+                answer.value = node.value.toString();
+            }
+            // We recurse on the left (circle the left side of the tree) and
+            // we recurse on the right side of the tree (circle the right side of the tree).
+            answer.left = fizzBuzzHelper(node.left);
+            answer.right = fizzBuzzHelper(node.right);
+            return answer;
+        }
+
+
     }
 
     public String toString() {

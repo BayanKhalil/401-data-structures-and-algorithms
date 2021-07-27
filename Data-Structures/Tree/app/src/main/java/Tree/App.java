@@ -40,8 +40,8 @@ public class App {
 //        System.out.println(binaryTree.contains(55));
 //        System.out.println(binaryTree.contains(88));
 //        System.out.println(binaryTree.findMaximumValue());
-        binaryTree.breadthFirstTraverse(binaryTree.root);
-
+//        binaryTree.breadthFirstTraverse(binaryTree.root);
+        System.out.println(binaryTree.fizzBuzz(binaryTree));
 
 
 
