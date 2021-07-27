@@ -11,3 +11,4 @@ replace the value with  "buzz".if it is divisible by 3
 replace the value with  "fizz"
 
 # API
+![fizzbuzz](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Tree/assests/fizzBuzz.jpg)
