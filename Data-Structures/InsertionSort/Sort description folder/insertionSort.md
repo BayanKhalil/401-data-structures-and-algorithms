@@ -12,3 +12,4 @@ To sort an array of size n in ascending order:
 3: If the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element.
 
 # Api
+![insertionSort](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/InsertionSort/assests/insertionSort.jpg)
