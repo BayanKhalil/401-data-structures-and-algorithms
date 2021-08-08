@@ -2,7 +2,7 @@
 
 
 title |link |code
-------|------|------
+------|------|------|
 reverse array|[reverseArray](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/challenges/reverseArray/src/com/reverse-array/src/com/company/Readme.md)|[code](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/challenges/reverseArray/src/com/reverse-array/src/com/company/Main.java)
 array-shift-insert|[insertShiftArray](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/challenges/array-insert-shift/src/Readme.md)|[code](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/challenges/array-insert-shift/src/com/company/Main.java)
 BinarySearch|[binary-search](https://github.com/BayanKhalil/binary-search/blob/main/binarySearch.png)|[code](https://github.com/BayanKhalil/binary-search/blob/main/Main.java)
@@ -18,5 +18,5 @@ Tree|[trees](https://github.com/BayanKhalil/401-data-structures-and-algorithms/b
 tree-max|[tree-max](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Tree/Tree%20Description%20folder/treeMax.md)|[code](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Tree/app/src/main/java/Tree/BinaryTree.java)
 tree-breadth-first|[tree-breadth-first](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Tree/Tree%20Description%20folder/breadthFirstTree.md)|[code](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Tree/app/src/main/java/Tree/BinaryTree.java)
 tree-fizz-buzz|[tree-fizz-buzz](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Tree/Tree%20Description%20folder/fizzbuzz.md)|[code](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Tree/app/src/main/java/Tree/BinaryTree.java)
-insertion Sort|[insertion-Sort](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/InsertionSort/Sort%20description%20folder/insertionSort.md)|[code](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/InsertionSort/lib/src/main/java/InsertionSort/InsertionSort.java)|[BLOG.md](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/InsertionSort/BLOG.md)
+insertion Sort|[insertion-Sort](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/InsertionSort/Sort%20description%20folder/insertionSort.md)|[code](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/InsertionSort/lib/src/main/java/InsertionSort/InsertionSort.java),[BLOG.md](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/InsertionSort/BLOG.md)
 
