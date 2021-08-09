@@ -19,3 +19,4 @@ The merge function compares the elements of both sub-arrays one by one and place
 When we reach the end of one of the sub-arrays, the rest of the elements from the other array are copied into the input array thereby giving us the final sorted array
 
 # Api
+![mergeSort](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/InsertionSort/assests/mergesort.jpg)
