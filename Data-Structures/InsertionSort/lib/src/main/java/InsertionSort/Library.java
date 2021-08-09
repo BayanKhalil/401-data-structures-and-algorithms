@@ -18,9 +18,12 @@ public class Library {
         InsertionSort array = new InsertionSort();
         array.insertionSort(arr);
 
-            System.out.println(Arrays.toString(arr));
+            System.out.println("insertion sort"+Arrays.toString(arr));
 
+            MergeSort mergeSort=new MergeSort();
+            mergeSort.mergeSort(arr, arr.length);
 
+            System.out.println("merge sort"+Arrays.toString(arr));
 
     }
 }

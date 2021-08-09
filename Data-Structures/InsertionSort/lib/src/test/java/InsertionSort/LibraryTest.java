@@ -11,7 +11,8 @@ class LibraryTest {
         Library classUnderTest = new Library();
         assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
     }
-    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>insertion tests<<<<<<<<<<<<<<<<<<<<<<
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>insertion Sort tests<<<<<<<<<<<<<<<<<<<<<<
+
     @Test
     public void test1() {
         int[] input = {6, 2, 3, 4, 5, 1};
@@ -38,5 +39,34 @@ class LibraryTest {
         assertArrayEquals(expected, input);
     }
 
-    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>insertion tests<<<<<<<<<<<<<<<<<<<<<<
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Merge Sort tests<<<<<<<<<<<<<<<<<<<<<<
+
+    @Test
+    public void test4(){
+        int[] actual = {6, 2, 3, 4, 5, 1 };
+        MergeSort mergeSort=new MergeSort();
+        mergeSort.mergeSort(actual, actual.length);
+        int[] expected = { 1, 2, 3, 4, 5, 6 };
+        assertArrayEquals(expected, actual);
+    }
+    @Test
+    public void test5() {
+        int[] actual = {6, 5, 4, 3, 2, 1};
+        MergeSort mergeSort=new MergeSort();
+        mergeSort.mergeSort(actual, actual.length);
+        int[] expected = {1, 2, 3, 4, 5, 6};
+        assertArrayEquals(expected, actual);
+    }
+
+
+    @Test
+    public void test6() {
+        int[] actual = {6};
+        MergeSort mergeSort=new MergeSort();
+        mergeSort.mergeSort(actual, actual.length);
+        int[] expected = {6};
+        assertArrayEquals(expected, actual);
+    }
+
+
 }
