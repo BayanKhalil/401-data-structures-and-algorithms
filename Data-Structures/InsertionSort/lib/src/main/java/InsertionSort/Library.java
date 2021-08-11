@@ -25,5 +25,11 @@ public class Library {
 
             System.out.println("merge sort"+Arrays.toString(arr));
 
+
+            QuickSort quickSort=new QuickSort();
+            quickSort.quickSort(arr, 12,6);
+
+            System.out.println("quick Sort"+Arrays.toString(arr));
+
     }
 }

@@ -40,7 +40,6 @@ class LibraryTest {
     }
 
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Merge Sort tests<<<<<<<<<<<<<<<<<<<<<<
-
     @Test
     public void test4(){
         int[] actual = {6, 2, 3, 4, 5, 1 };
@@ -68,5 +67,32 @@ class LibraryTest {
         assertArrayEquals(expected, actual);
     }
 
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Quick Sort tests<<<<<<<<<<<<<<<<<<<<<<
 
+    @Test
+    public void test7() {
+        int[] actual = {5, 1, 6, 2, 3, 4};
+        QuickSort quickSort=new QuickSort();
+        quickSort.quickSort(actual,0,actual.length-1);
+
+        int[] expected = {1, 2, 3, 4, 5, 6};
+        assertArrayEquals(expected, actual);
+    }
+    @Test
+    public void test8() {
+        int[] actual = {-5, 1, -6, -2, 3, 4};
+        QuickSort quickSort=new QuickSort();
+        quickSort.quickSort(actual,0,actual.length-1);
+        int[] expected = {-6, -5, -2, 1, 3, 4};
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void test9() {
+        int[] actual = {2};
+        QuickSort quickSort=new QuickSort();
+        quickSort.quickSort(actual,0,actual.length-1);
+        int[] expected = {2};
+        assertArrayEquals(expected, actual);
+    }
 }
