@@ -100,3 +100,65 @@ When solved, the time complexity will come to O(nLogn).
 This is true for the worst, average and best case since it will always divide the array into two and then merge.
 
 The space complexity of the algorithm is O(n) as we're creating temporary arrays in every recursive call
+
+
+
+# Quick Sort
+
+is a sorting algorithm, which is leveraging the divide-and-conquer principle,and  Quicksort isn't a stable algorithm. A stable sorting algorithm is an algorithm where the elements with the same values appear in the same order in the sorted output as they appear in the input list.
+
+## Pseudocode
+
+```
+ALGORITHM QuickSort(arr, left, right)
+    if left < right
+        // Partition the array by setting the position of the pivot value
+        DEFINE position <-- Partition(arr, left, right)
+        // Sort the left
+        QuickSort(arr, left, position - 1)
+        // Sort the right
+        QuickSort(arr, position + 1, right)
+
+ALGORITHM Partition(arr, left, right)
+    // set a pivot value as a point of reference
+    DEFINE pivot <-- arr[right]
+    // create a variable to track the largest index of numbers lower than the defined pivot
+    DEFINE low <-- left - 1
+    for i <- left to right do
+        if arr[i] <= pivot
+            low++
+            Swap(arr, i, low)
+
+     // place the value of the pivot location in the middle.
+     // all numbers smaller than the pivot are on the left, larger on the right.
+     Swap(arr, right, low + 1)
+    // return the pivot index point
+     return low + 1
+
+ALGORITHM Swap(arr, i, low)
+    DEFINE temp;
+    temp <-- arr[i]
+    arr[i] <-- arr[low]
+    arr[low] <-- temp
+```
+
+## implementation
+
+The first method is quickSort() which takes as parameters the array to be sorted, the first and the last index. First, we check the indices and continue only if there are still elements to be sorted.
+
+We get the index of the sorted pivot and use it to recursively call partition() method with the same parameters as the quickSort() method, but with different indices
+
+the partition() method takes the last element as the pivot. Then, checks each element and swaps it before the pivot if its value is smaller.
+
+By the end of the partitioning, all elements less then the pivot are on the left of it and all elements greater then the pivot are on the right of it. The pivot is at its final sorted position and the function returns this position
+
+## Diagram
+
+![quickSort](https://www.geeksforgeeks.org/wp-content/uploads/gq/2014/01/QuickSort2.png)
+
+## Time and Space Complexity
+
+In the best case, the algorithm will divide the list into two equal size sub-lists. So, the first iteration of the full n-sized list needs O(n). Sorting the remaining two sub-lists with n/2 elements takes 2*O(n/2) each. As a result, the QuickSort algorithm has the complexity of O(n log n)
+In the worst case, the algorithm will select only one element in each iteration, so O(n) + O(n-1) + … + O(1), which is equal to O(n2).
+
+On the average QuickSort has O(n log n) complexity, making it suitable for big data volumes
