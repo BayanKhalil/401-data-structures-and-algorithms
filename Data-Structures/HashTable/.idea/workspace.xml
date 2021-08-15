@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34d5ca27-f35d-4c4c-9b03-f7e35ac3f471" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assests/repeated word (1).jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/description Folder/hashTable.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/description Folder/repeatedWord.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/src/main/java/HashTable/HashNode.java" afterDir="false" />
@@ -59,6 +60,11 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\401\data3\401-data-structures-and-algorithms\Data-Structures\HashTable\assests" />
+    </key>
   </component>
   <component name="RunManager" selected="Gradle.LibraryTest.RepeatedWord1">
     <configuration name="RepeatedWord" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
