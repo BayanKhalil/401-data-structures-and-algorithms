@@ -10,6 +10,16 @@ public class Library {
 
     public static void main(String[] args) throws UnsupportedEncodingException {
 
+        HashTable table = new HashTable();
+
+        table.add("bayan","engineer");
+        table.add("aya","graphic design");
+        table.add("tala","teacher");
+        table.add("rana","kids teacher");
+        System.out.println(table.toString());
+        System.out.println(table.contains("rana"));
+        System.out.println(table.hash("Elephant"));
+
 
 
         String test = "Once upon a time, there was a brave princess who...";
