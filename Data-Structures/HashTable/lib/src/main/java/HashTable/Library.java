@@ -4,6 +4,9 @@
 package HashTable;
 
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 
 public class Library {
 
@@ -12,10 +15,20 @@ public class Library {
 
 
 
-        String test = "Once upon a time, there was a brave princess who...";
-        RepeatedWord test2=new RepeatedWord();
-        System.out.println( test2.repeatedWord(test));
+//        String test = "Once upon a time, there was a brave princess who...";
+//        RepeatedWord test2=new RepeatedWord();
+//        System.out.println( test2.repeatedWord(test));
 
 
+        Node root1 = new Node(10,
+                new Node(5, new Node(2), new Node(7)),
+                new Node(15, new Node(12), new Node(17)));
+
+
+        Node root2 = new Node(5,
+                new Node(0), new Node(2));
+
+
+        System.out.println(IntersectionTree.treeIntersection(root1, root2));
     }
 }
