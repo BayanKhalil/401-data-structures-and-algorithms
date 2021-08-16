@@ -12,6 +12,59 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
 
+
+    @Test
+    public void add() {
+        HashTable hashTable=new HashTable();
+        hashTable.add("bayan","engineer");
+        hashTable.add("aya","graphic design");
+        assertTrue(hashTable.add("key","value ")
+        );
+    }
+
+    @Test
+    public void get() {
+        HashTable hashTable=new HashTable();
+        hashTable.add("bayan","engineer");
+        hashTable.add("aya","graphic design");
+        assertEquals("engineer", hashTable.get("bayan"));
+    }
+
+    @Test
+    public void contains() {
+        HashTable hashTable=new HashTable();
+        hashTable.add("bayan","engineer");
+        hashTable.add("aya","graphic design");
+        assertTrue(hashTable.contains("bayan"));
+    }
+    @Test
+    public void contains2() {
+        HashTable hashTable=new HashTable();
+        hashTable.add("bayan","engineer");
+        hashTable.add("aya","graphic design");
+        assertFalse(hashTable.contains("rana"));
+    }
+
+    @Test
+    public void testHash() {
+        HashTable hashTable=new HashTable();
+        assertEquals(0, hashTable.hash("Hello")
+        );
+    }
+
+
+    @Test public void collisionHandle() {
+        HashTable hashTable = new HashTable();
+        hashTable.add("bayan","engineer");
+        hashTable.add("aya","graphic design");
+        hashTable.add("tala","teacher");
+        hashTable.add("rana","kids teacher");
+
+        String expected ="HashTable{buckets=[[HashNode{key='aya', value='graphic design'}], null, [HashNode{key='bayan', value='engineer'}, HashNode{key='tala', value='teacher'}, HashNode{key='rana', value='kids teacher'}], null, null]}";
+
+        assertEquals(expected, hashTable.toString());
+    }
+
     @Test
     public void RepeatedWord1() {
         RepeatedWord test=new RepeatedWord();
