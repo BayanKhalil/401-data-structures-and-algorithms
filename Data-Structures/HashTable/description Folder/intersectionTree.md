@@ -12,3 +12,4 @@ write code to return array of intersection element
  
 
 # API
+![IntersectionTree](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/HashTable/assests/intersection%20tree.jpg)
