@@ -6,7 +6,10 @@ package HashTable;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+
 import java.util.HashMap;
+
+
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -87,8 +90,56 @@ class LibraryTest {
         assertNull(  test.repeatedWord(sentences));
     }
 
+    public void intersectionTree1(){
+
+    Node root1 = new Node(10,
+            new Node(5),
+            new Node(15));
+
+    Node root2 = new Node(5,
+            new Node(0), new Node(2));
+
+    List<Integer> expected = new ArrayList();
+        expected.add(5);
+
+        assertEquals(expected,IntersectionTree.treeIntersection(root1, root2));
+    }
 
     @Test
+    public void intersectionTree2(){
+
+        Node root1 = new Node(10,
+                new Node(5, new Node(2), new Node(3)),
+                new Node(8, new Node(0), new Node(19)));
+
+        Node root2 = new Node(5,
+                new Node(0), new Node(2));
+
+        List<Integer> expected = new ArrayList();
+        expected.add(5);
+        expected.add(0);
+        expected.add(2);
+
+        assertEquals(expected,IntersectionTree.treeIntersection(root1, root2));
+    }
+
+    @Test
+    public void intersectionTree3(){
+
+        Node root1 = new Node(10,
+                new Node(5), new Node(2));
+
+        Node root2 = new Node(3,
+                new Node(6), new Node(9));
+
+        List<Integer> expected = new ArrayList();
+
+        assertEquals(expected,IntersectionTree.treeIntersection(root1, root2));
+    }
+  
+  
+    @Test
+
     public void leftJoin1(){
         HashMap map1 = new HashMap();
         map1.put("bayan", "study");
@@ -141,4 +192,7 @@ class LibraryTest {
         assertEquals(list ,  LeftJoin.leftJoin(map1, map2));
 
     }
+
+
+
 }

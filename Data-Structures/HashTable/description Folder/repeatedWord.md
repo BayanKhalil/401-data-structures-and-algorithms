@@ -12,3 +12,4 @@ write code to return most repeated word
 5. if not add it to hashTable
 
 # API
+![Repeated Word](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/HashTable/assests/repeated%20word%20(1).jpg)
