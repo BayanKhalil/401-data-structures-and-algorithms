@@ -6,6 +6,10 @@ package HashTable;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+
+import java.util.HashMap;
+
+
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -86,8 +90,6 @@ class LibraryTest {
         assertNull(  test.repeatedWord(sentences));
     }
 
-
-    @Test
     public void intersectionTree1(){
 
     Node root1 = new Node(10,
@@ -134,6 +136,63 @@ class LibraryTest {
 
         assertEquals(expected,IntersectionTree.treeIntersection(root1, root2));
     }
+  
+  
+    @Test
+
+    public void leftJoin1(){
+        HashMap map1 = new HashMap();
+        map1.put("bayan", "study");
+        map1.put("aya", "eat");
+        map1.put("rana", "sleep");
+        map1.put("tala", "run");
+
+        HashMap map2 = new HashMap();
+        map2.put("esraa", "eat");
+        map2.put("aya", "drink");
+        map2.put("rana", "run");
+
+        List<String> list = new ArrayList<>();
+        list.add("tala: run, null");
+        list.add("bayan: study, null");
+        list.add("rana: sleep, run");
+        list.add("aya: eat, drink");
+
+        assertEquals(list,LeftJoin.leftJoin(map1, map2));
+    }
+
+    @Test
+    public void leftJoin2(){
+        HashMap map1 = new HashMap();
+        map1.put("bayan", "study");
+        map1.put("aya", "eat");
+        map1.put("rana", "sleep");
+        map1.put("tala", "run");
+
+        HashMap map2 = new HashMap();
+
+
+        List<String> list = new ArrayList<>();
+        list.add("tala: run, null");
+        list.add("bayan: study, null");
+        list.add("rana: sleep, null");
+        list.add("aya: eat, null");
+
+        assertEquals(list ,  LeftJoin.leftJoin(map1, map2));
+
+    }
+
+    @Test
+    public void leftJoin3(){
+        HashMap map1 = new HashMap();
+        HashMap map2 = new HashMap();
+
+        List<String> list = new ArrayList<>();
+
+        assertEquals(list ,  LeftJoin.leftJoin(map1, map2));
+
+    }
+
 
 
 }

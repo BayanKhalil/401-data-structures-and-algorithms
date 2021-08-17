@@ -4,9 +4,11 @@
 package HashTable;
 
 import java.io.UnsupportedEncodingException;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+
 
 public class Library {
 
@@ -40,5 +42,21 @@ public class Library {
 
 
         System.out.println(IntersectionTree.treeIntersection(root1, root2));
+      
+      hashmap-left-join
+        HashMap map1=new HashMap();
+        map1.put("bayan", "study");
+        map1.put("aya", "eat");
+        map1.put("rana", "sleep");
+        map1.put("tala", "run");
+
+        HashMap map2=new HashMap();
+//        map2.put("esraa", "eat");
+//        map2.put("aya", "drink");
+//        map2.put("rana", "run");
+
+
+        System.out.println( LeftJoin.leftJoin(map1,map2));
+
     }
 }
