@@ -10,3 +10,4 @@ Declare a list and iterate through each hashmap and compare the keys if it match
 if not  add the second hash map value which is null.
 
 # API
+![Left Join](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/HashTable/assests/leftJoin.jpg)
