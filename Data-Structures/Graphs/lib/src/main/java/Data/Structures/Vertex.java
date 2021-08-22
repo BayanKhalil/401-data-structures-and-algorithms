@@ -4,10 +4,10 @@ import java.util.Objects;
 
 public class Vertex {
 
-    String label;
+    String data;
 
     public Vertex(String label) {
-        this.label = label;
+        this.data = label;
     }
 
     public Vertex() {
@@ -16,7 +16,7 @@ public class Vertex {
 
     @Override
     public int hashCode() {
-        return Objects.hash(label);
+        return Objects.hash(data);
     }
 
     @Override
@@ -24,13 +24,13 @@ public class Vertex {
         if (this == obj) return true;
         if (!(obj instanceof Vertex)) return false;
         Vertex vertex = (Vertex) obj;
-        return label.equals(vertex.label);
+        return data.equals(vertex.data);
     }
 
     @Override
     public String toString() {
         return "Vertex{" +
-                "label='" + label + '\'' +
+                "data='" + data + '\'' +
                 '}';
     }
 }

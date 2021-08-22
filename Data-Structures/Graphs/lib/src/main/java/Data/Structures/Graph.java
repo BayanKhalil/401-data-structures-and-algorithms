@@ -1,6 +1,5 @@
 package Data.Structures;
 
-import com.sun.javafx.geom.Edge;
 
 import java.util.*;
 
@@ -24,8 +23,11 @@ public class Graph {
         adjVertices.get(vertex2).add(vertex1);
     }
 
-    public Map<Vertex, List<Vertex>>  getVertex() {
-        return adjVertices;
+    public List<Vertex>  getVertex(String data) {
+
+        if( adjVertices.get(data)==null )
+            System.out.println("not found");
+        return adjVertices.get(data);
     }
 
 
@@ -71,4 +73,27 @@ public class Graph {
         return adjVertices.size();
     }
 
+//    >>>>>>>>>>>>>>>breadth First<<<<<<<<<<<<<<<<<<<><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+    Set<String> bft(Graph graph, String root) {
+
+        Set<String> visited = new LinkedHashSet<>();
+        Queue<String> queue = new LinkedList<>();
+        queue.add(root);
+        visited.add(root);
+        while (!queue.isEmpty()) {
+            String vertex = queue.poll();
+            for (Vertex v : graph.getAdjvertices(vertex)) {
+                if (!visited.contains(v.data)) {
+                    visited.add(v.data);
+                    queue.add(v.data);
+                }
+            }
+        }
+        return visited;
+    }
+
+    private List<Vertex> getAdjvertices(String data) {
+        return adjVertices.get(new Vertex(data));
+    }
 }
