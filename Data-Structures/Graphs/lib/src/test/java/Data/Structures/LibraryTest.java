@@ -4,6 +4,10 @@
 package Data.Structures;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
@@ -13,7 +17,7 @@ class LibraryTest {
     Graph graph = new Graph();
     graph.addVertex("Bob");
     graph.addVertex("Alice");
-    String expected="Vertex{label='Bob'}[]Vertex{label='Alice'}[]";
+    String expected="Vertex{data='Bob'}[]Vertex{data='Alice'}[]";
     assertEquals(expected,graph.printGraph());
 }
 
@@ -26,7 +30,7 @@ class LibraryTest {
 
         graph.addEdge("Bob", "Mary");
         graph.addEdge("Bob", "Alice");
-        String expected="Vertex{label='Bob'}[Vertex{label='Mary'}, Vertex{label='Alice'}]Vertex{label='Alice'}[Vertex{label='Bob'}]Vertex{label='Mary'}[Vertex{label='Bob'}]";
+        String expected="Vertex{data='Bob'}[Vertex{data='Mary'}, Vertex{data='Alice'}]Vertex{data='Alice'}[Vertex{data='Bob'}]Vertex{data='Mary'}[Vertex{data='Bob'}]";
         assertEquals(expected,graph.printGraph());
     }
     @Test
@@ -41,7 +45,7 @@ class LibraryTest {
 
         graph.removeVertex("Bob");
         graph.removeEdge("Bob","Alice");
-        String expected="Vertex{label='Alice'}[]Vertex{label='Mary'}[]";
+        String expected="Vertex{data='Alice'}[]Vertex{data='Mary'}[]";
         assertEquals(expected,graph.printGraph());
     }
 
@@ -74,6 +78,63 @@ class LibraryTest {
     public void test7(){
         Graph graph = new Graph();
         assertEquals(0,graph.size());
+    }
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Breadth First <<<<<<<<<<<<<<<<<<<<<<<
+
+    @Test
+    public void test8() {
+
+        Graph graph = new Graph();
+
+        graph.addVertex("Bob");
+        graph.addVertex("Mary");
+        graph.addVertex("Alice");
+        graph.addVertex("Carl");
+
+        graph.addEdge("Alice", "Carl");
+        graph.addEdge("Bob", "Mary");
+        graph.addEdge("Bob", "Alice");
+
+        Set<String> expected= new LinkedHashSet<>();
+        expected.add("Alice");
+        expected.add("Carl");
+        expected.add("Bob");
+        expected.add("Mary");
+
+       assertEquals(expected,graph.bft(graph, "Alice"));
+
+    }
+
+    @Test
+    public void test9() {
+
+        Graph graph = new Graph();
+
+        graph.addVertex("Bob");
+        graph.addVertex("Mary");
+        graph.addVertex("Alice");
+        graph.addVertex("Carl");
+
+        Set<String> expected=new LinkedHashSet<>();
+        expected.add("Alice");
+        assertEquals(expected,graph.bft(graph, "Alice"));
+    }
+
+    @Test
+    public void test10() {
+
+        Graph graph = new Graph();
+
+        graph.addVertex("Bob");
+        graph.addVertex("Mary");
+        graph.addVertex("Alice");
+        graph.addVertex("Carl");
+        graph.addEdge("Alice", "Carl");
+        graph.addEdge("Bob", "Mary");
+        Set<String> expected=new LinkedHashSet<>();
+        expected.add("Alice");
+        expected.add("Carl");
+        assertEquals(expected,graph.bft(graph, "Alice"));
     }
 
 

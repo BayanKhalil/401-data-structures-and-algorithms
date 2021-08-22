@@ -4,28 +4,45 @@
 package Data.Structures;
 
 import javax.xml.soap.Node;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 public class Library {
     public boolean someLibraryMethod() {
         return true;
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Graph graph = new Graph();
+
         graph.addVertex("Bob");
-        graph.addVertex("Alice");
         graph.addVertex("Mary");
-
+        graph.addVertex("Alice");
+        graph.addVertex("Carl");
+//
+        graph.addEdge("Alice", "Carl");
         graph.addEdge("Bob", "Mary");
-        graph.addEdge("Bob", "Alice");
+//        graph.addEdge("Bob", "Alice");
 
-        graph.removeVertex("Bob");
-        graph.removeVertex("Alice");
-        graph.removeVertex("Mary");
-        graph.removeEdge("Bob","Alice");
-        System.out.println( graph.printGraph());
-//        System.out.println( graph.size());
+//        System.out.println("the graph => " + graph.printGraph());
+//        System.out.println("the size => " + graph.size());
 
+//        graph.removeEdge("Carl", "Alice");
+//        graph.removeVertex("Bob");
+//        System.out.println();
+
+//        System.out.println("the graph => " + graph.printGraph());
+//        System.out.println("the size => " + graph.size());
+
+        System.out.println();
+
+//        System.out.println(graph.bft());
+        System.out.println(graph.getVertex("nb"));
+        System.out.println(graph.bft(graph, "Alice"));
+
+        Set<String> expected = new LinkedHashSet<>();
+        System.out.println(expected.add("Alice, Carl, Bob, Mary"));
     }
 
 }
