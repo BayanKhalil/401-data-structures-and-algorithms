@@ -23,3 +23,4 @@ write the Breadth-First-Traversal  method on Graph.
   - space:O(n)
   
 ## API
+![bft](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Graphs/assests/Breadth%20First.jpg)
