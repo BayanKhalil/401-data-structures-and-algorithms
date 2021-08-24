@@ -16,3 +16,4 @@ The algorithm starts at the root node (selecting some arbitrary node as the root
   Since an extra visited array is needed of size n.
 
 ## API
+![depthfirst](https://github.com/BayanKhalil/401-data-structures-and-algorithms/blob/main/Data-Structures/Graphs/assests/depthFirstT.jpg)
