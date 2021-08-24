@@ -24,7 +24,7 @@ public class Library {
 
         graph.addEdge("Alice", "Carl",0);
         graph.addEdge("Bob", "Mary",0);
-        graph.addEdge("Bob", "Alice",0);
+//        graph.addEdge("Bob", "Alice",0);
 
 //        System.out.println("the graph => " + graph.printGraph());
 //        System.out.println("the size => " + graph.size());

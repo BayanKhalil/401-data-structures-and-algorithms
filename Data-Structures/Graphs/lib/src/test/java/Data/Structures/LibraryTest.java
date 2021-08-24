@@ -137,5 +137,62 @@ class LibraryTest {
         assertEquals(expected,graph.bft(graph, "Alice"));
     }
 
+//    >>>>>>>>>>>>>>>>>>>>>>>>depth First<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+@Test
+public void test11() {
+
+    Graph graph = new Graph();
+
+    graph.addVertex("Bob");
+    graph.addVertex("Mary");
+    graph.addVertex("Alice");
+    graph.addVertex("Carl");
+
+    graph.addEdge("Alice", "Carl",0);
+    graph.addEdge("Bob", "Mary",0);
+    graph.addEdge("Bob", "Alice",0);
+
+    Set<String> expected= new LinkedHashSet<>();
+    expected.add("Alice");
+    expected.add("Bob");
+    expected.add("Mary");
+    expected.add("Carl");
+
+    assertEquals(expected,graph.dft(graph, "Alice"));
+
+}
+
+    @Test
+    public void test12() {
+
+        Graph graph = new Graph();
+
+        graph.addVertex("Bob");
+        graph.addVertex("Mary");
+        graph.addVertex("Alice");
+        graph.addVertex("Carl");
+
+        Set<String> expected=new LinkedHashSet<>();
+        expected.add("Alice");
+        assertEquals(expected,graph.dft(graph, "Alice"));
+    }
+
+    @Test
+    public void test13() {
+
+        Graph graph = new Graph();
+
+        graph.addVertex("Bob");
+        graph.addVertex("Mary");
+        graph.addVertex("Alice");
+        graph.addVertex("Carl");
+        graph.addEdge("Alice", "Carl",0);
+        graph.addEdge("Bob", "Mary",0);
+        Set<String> expected=new LinkedHashSet<>();
+        expected.add("Alice");
+        expected.add("Carl");
+        assertEquals(expected,graph.dft(graph, "Alice"));
+    }
+
 
 }
