@@ -3,9 +3,8 @@
  */
 package Data.Structures;
 
-import javax.xml.soap.Node;
-import java.util.LinkedHashSet;
-import java.util.Set;
+
+import java.util.*;
 
 public class Library {
     public boolean someLibraryMethod() {
@@ -13,16 +12,18 @@ public class Library {
 
     }
 
+    private Integer totalCost = 0;
+
     public static void main(String[] args) throws Exception {
         Graph graph = new Graph();
-
-        graph.addVertex("Bob");
-        graph.addVertex("Mary");
-        graph.addVertex("Alice");
-        graph.addVertex("Carl");
 //
-        graph.addEdge("Alice", "Carl");
-        graph.addEdge("Bob", "Mary");
+//        graph.addVertex("Bob");
+//        graph.addVertex("Mary");
+//        graph.addVertex("Alice");
+//        graph.addVertex("Carl");
+////
+//        graph.addEdge("Alice", "Carl",0);
+//        graph.addEdge("Bob", "Mary",0);
 //        graph.addEdge("Bob", "Alice");
 
 //        System.out.println("the graph => " + graph.printGraph());
@@ -38,11 +39,77 @@ public class Library {
         System.out.println();
 
 //        System.out.println(graph.bft());
-        System.out.println(graph.getVertex("nb"));
-        System.out.println(graph.bft(graph, "Alice"));
+//        System.out.println(graph.getVertex("nb"));
+//        System.out.println(graph.bft(graph, "Alice"));
+//
+//        Set<String> expected = new LinkedHashSet<>();
+//        System.out.println(expected.add("Alice, Carl, Bob, Mary"));
 
-        Set<String> expected = new LinkedHashSet<>();
-        System.out.println(expected.add("Alice, Carl, Bob, Mary"));
+
+        BusinessTrip test = new BusinessTrip();
+
+
+        BusinessTrip businessTrip = new BusinessTrip();
+
+
+
+
+
+        BusinessTrip.Node Pandora = test.AddNode("Pandora");
+        BusinessTrip.Node Metroville = test.AddNode("Metroville");
+        BusinessTrip.Node Arendelle = test.AddNode("Arendelle");
+        BusinessTrip.Node Monstropolis = test.AddNode("Monstropolis");
+        BusinessTrip.Node Narnia = test.AddNode("Narnia");
+        BusinessTrip.Node Naboo = test.AddNode("Naboo");
+
+
+        test.addEdge(Pandora,Metroville,82);
+        test.addEdge(Pandora,Arendelle,150);
+
+
+        test.addEdge(Metroville,Arendelle,99);
+        test.addEdge(Metroville,Narnia,37);
+        test.addEdge(Metroville,Monstropolis,105);
+        test.addEdge(Metroville,Naboo,26);
+
+        test.addEdge(Arendelle,Monstropolis,42);
+
+        test.addEdge(Monstropolis,Naboo,73);
+
+        test.addEdge(Narnia,Naboo,250);
+
+
+
+
+        ArrayList<String> city = new ArrayList();
+
+        city.add("Pandora");
+        city.add("Metroville");
+
+        ArrayList<String> city2 = new ArrayList();
+        city2.add("Arendelle");
+        city2.add("Monstropolis");
+        city2.add("Naboo");
+
+        ArrayList<String> city3 = new ArrayList();
+        city3.add("Naboo");
+        city3.add("Pandora");
+
+        //
+        ArrayList<String> city4= new ArrayList();
+        city4.add("Narnia");
+        city4.add("Arendelle");
+        city4.add("Naboo");
+
+
+
+
+        System.out.println(businessTrip.getEdge(test,city));
+        System.out.println(businessTrip.getEdge(test,city2));
+        System.out.println(businessTrip.getEdge(test,city3));
+        System.out.println(businessTrip.getEdge(test,city4));
+
+
+
     }
-
 }
