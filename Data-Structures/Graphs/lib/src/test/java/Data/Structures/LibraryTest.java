@@ -28,8 +28,8 @@ class LibraryTest {
         graph.addVertex("Alice");
         graph.addVertex("Mary");
 
-        graph.addEdge("Bob", "Mary");
-        graph.addEdge("Bob", "Alice");
+        graph.addEdge("Bob", "Mary",0);
+        graph.addEdge("Bob", "Alice",0);
         String expected="Vertex{data='Bob'}[Vertex{data='Mary'}, Vertex{data='Alice'}]Vertex{data='Alice'}[Vertex{data='Bob'}]Vertex{data='Mary'}[Vertex{data='Bob'}]";
         assertEquals(expected,graph.printGraph());
     }
@@ -40,8 +40,8 @@ class LibraryTest {
         graph.addVertex("Alice");
         graph.addVertex("Mary");
 
-        graph.addEdge("Bob", "Mary");
-        graph.addEdge("Bob", "Alice");
+        graph.addEdge("Bob", "Mary",0);
+        graph.addEdge("Bob", "Alice",0);
 
         graph.removeVertex("Bob");
         graph.removeEdge("Bob","Alice");
@@ -91,9 +91,9 @@ class LibraryTest {
         graph.addVertex("Alice");
         graph.addVertex("Carl");
 
-        graph.addEdge("Alice", "Carl");
-        graph.addEdge("Bob", "Mary");
-        graph.addEdge("Bob", "Alice");
+        graph.addEdge("Alice", "Carl",0);
+        graph.addEdge("Bob", "Mary",0);
+        graph.addEdge("Bob", "Alice",0);
 
         Set<String> expected= new LinkedHashSet<>();
         expected.add("Alice");
@@ -129,8 +129,8 @@ class LibraryTest {
         graph.addVertex("Mary");
         graph.addVertex("Alice");
         graph.addVertex("Carl");
-        graph.addEdge("Alice", "Carl");
-        graph.addEdge("Bob", "Mary");
+        graph.addEdge("Alice", "Carl",0);
+        graph.addEdge("Bob", "Mary",0);
         Set<String> expected=new LinkedHashSet<>();
         expected.add("Alice");
         expected.add("Carl");

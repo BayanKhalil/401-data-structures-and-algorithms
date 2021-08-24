@@ -5,9 +5,10 @@ import java.util.Objects;
 public class Vertex {
 
     String data;
+    public int weight;
 
-    public Vertex(String label) {
-        this.data = label;
+    public Vertex(String data) {
+        this.data = data;
     }
 
     public Vertex() {
